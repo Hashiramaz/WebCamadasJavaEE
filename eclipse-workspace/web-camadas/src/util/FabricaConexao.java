@@ -9,10 +9,10 @@ public class FabricaConexao {
 	
 	public Connection fazerconexao() {
 		try {
-				Class.forName("org.postgresql.Driver");
+				Class.forName("com.mysql.jdbc.Driver");
 				
 				this.conexao = DriverManager.getConnection(
-						"jdbc:postgresql://localhost/web_cam_20182",
+						"jdbc:postgresql://localhost:3306/web_cam_20182",
 						"postgres",
 						"root"
 						);
