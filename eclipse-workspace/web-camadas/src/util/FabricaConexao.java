@@ -12,18 +12,23 @@ public class FabricaConexao {
 				Class.forName("org.postgresql.Driver");
 				
 				this.conexao = DriverManager.getConnection(
-						"jdbc:postgresql://localhost",
+						"jdbc:postgresql://localhost/web_cam_20182",
 						"postgres",
 						"root"
 						);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
-		
+		return this.conexao;
 	}
 	
 	public void fecharconexao() {
 		try {
 			this.conexao.close();
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
+		
 	}
 
 }
