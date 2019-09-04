@@ -12,9 +12,9 @@ public class FabricaConexao {
 				Class.forName("com.mysql.jdbc.Driver");
 				
 				this.conexao = DriverManager.getConnection(
-						"jdbc:postgresql://localhost:3306/web_cam_20182",
-						"postgres",
-						"root"
+						"jdbc:mysql://localhost:3306/new_schema",
+						"root",
+						""
 						);
 		} catch (Exception e) {
 			e.printStackTrace();
